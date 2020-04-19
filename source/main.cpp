@@ -4,7 +4,7 @@
 #include <string.h>
 
 #include <switch.h>
-#include <vm\dart.h>
+#include <\runtime\vm\dart.h>
 
 int main(int argc, char** argv) {
 

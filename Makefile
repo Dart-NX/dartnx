@@ -43,7 +43,7 @@ OUTDIR		:=	out
 BUILD		:=	build
 SOURCES		:=	source
 DATA		:=	data
-INCLUDES	:=	./
+INCLUDES	:=	./runtime
 EXEFS_SRC	:=	exefs_src
 #ROMFS	:=	romfs
 
