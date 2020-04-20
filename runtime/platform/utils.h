@@ -439,6 +439,8 @@ class Utils {
 #include "platform/utils_macos.h"
 #elif defined(HOST_OS_WINDOWS)
 #include "platform/utils_win.h"
+#elif defined(HOST_OS_NX)
+#include "platform/utils_win.h"
 #else
 #error Unknown target os.
 #endif

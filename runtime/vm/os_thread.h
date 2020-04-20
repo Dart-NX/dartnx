@@ -28,6 +28,8 @@
 #include "vm/os_thread_macos.h"
 #elif defined(HOST_OS_WINDOWS)
 #include "vm/os_thread_win.h"
+#elif defined(HOST_OS_NX)
+#include "platform/utils_win.h"
 #else
 #error Unknown target os.
 #endif

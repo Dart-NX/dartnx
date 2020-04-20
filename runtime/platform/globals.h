@@ -110,16 +110,24 @@
 #define HOST_OS_IOS 1
 #endif
 
-#elif defined(_WIN32)
+//#elif defined(_WIN32)
 
 // Windows, both 32- and 64-bit, regardless of the check for _WIN32.
-#define HOST_OS_WINDOWS 1
+//#define HOST_OS_WINDOWS 1
+
+#elif defined(__NX__)
+#define HOST_OS_NX 1
 
 #elif defined(__Fuchsia__)
 #define HOST_OS_FUCHSIA
 
 #elif !defined(HOST_OS_FUCHSIA)
-#error Automatic target os detection failed.
+
+#define HOST_OS_NX 1
+#define DEBUG
+#include <switch.h>
+
+//#error Automatic target os detection failed.
 #endif
 
 #if defined(DEBUG)
@@ -389,6 +397,8 @@ typedef simd128_value_t fpu_register_t;
 #define TARGET_OS_MACOS 1
 #elif defined(HOST_OS_WINDOWS)
 #define TARGET_OS_WINDOWS 1
+#elif defined(HOST_OS_NX)
+#define TARGET_OS_HOS 1
 #else
 #error Automatic target OS detection failed.
 #endif
